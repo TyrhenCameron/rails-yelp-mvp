@@ -11,12 +11,16 @@
 require 'faker'
 CATEGORIES = ["chinese", "italian", "japanese", "french", "belgian"]
 
+puts "Wiping restaurants"
+
+Restaurant.destroy_all
+
 puts "Seeding restaurants"
 # make restaurant
 
 5.times do
   restaurant = Restaurant.new(
-  name: Faker::Games::LeagueOfLegends.masteries,
+  name: Faker::TvShows::FamilyGuy.quote,
   address: Faker::Games::FinalFantasyXIV.zone,
   category: CATEGORIES.sample,
   phone_number: Faker::PhoneNumber.cell_phone

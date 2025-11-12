@@ -1,2 +1,2 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+ <%= render 'reviews/form', review: @review, restaurant: @restaurant %>
+<%= link_to "Quit (back to restaurant)", restaurant_path(@restaurant), class: "btn btn-warning mt-5"%>
