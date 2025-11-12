@@ -1,0 +1,10 @@
+<h1>Restaurants#index</h1>
+<div class="container">
+  <div class="cards">
+    <%= @restaurants.each do |restaurant| %>
+      <p><%= restaurant.name %></p>
+      <p><%= restaurant.address %></p>
+      <p><%= restaurant.category %></p>
+    <% end %>
+  </div>
+</div>
